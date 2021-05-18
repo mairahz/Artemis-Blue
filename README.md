@@ -1,12 +1,12 @@
+# Outdoor GPS Dead-Reckoning with Lorawan
 # Artemis-Blue
 
-# Outdoor GPS Dead-Reckoning with Lorawan
 
 ## Team Members
 
 | Name | Role |
 | ----------- | ----------- |
-| Rhys Sneddon |  |
+| Rhys Sneddon | I will be working on the static node network, mobile node, LoRaWAN gateway and web dashboard. This will involve: bluetooth advertising with the static nodes; bluetooth scanning with the particle argon in the mobile node; serial communication between the particle argon and LTG92 in the mobile node (to transfer RSSI data); sending GPS and RSSI data over LoRaWAN to the LoRaWAN gateway and creating a web dashboard to display the determined mobile node position.|
 | Mairah Zulkepli |  |
 
 ## Project Overview/Scenario
@@ -15,9 +15,12 @@
 The purpose of this project is to perform outdoor locating of a mobile node using GPS and RSSI data in a dead reckoning system with kalman filtering. A static beacon network will be created using four thing:52s. The mobile node (consisting of a particle argon and LTG92) will send RSSI data from the static beacon network, along with GPS data from the LTG92's GPS module, over LoRaWAN to a LoRaWAN gateway. An application server will process the data to determine the mobile node's location using a dead-reckoning model with kalman filtering. Lastly, a web dashboard viewer will be used to show the current location of the mobile node. Scenarios that this project would be useful in include tracking of animals, people or objects.
 
 ### System Overview
-**Block Diagram**
+**System Block Diagram**
 
 ![Block Diagram](systemdiagram.png)
+
+**Software Flow Chart**
+
 
 ### Sensor Integration
 The L76-L GPS sensor will be used to get longitude and latitude data for the mobile node. It will be accessed through I2C using the firmware on the LTG92. 
