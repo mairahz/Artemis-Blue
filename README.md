@@ -19,7 +19,7 @@ The key performance indicators of the project would be:
 2. Having a web dashboard viewer showing the general location of the person
 3. At least be able to track a person in a 10 x 10 m outdoor area
 4. Able to send data from the LoRaWAN gps tracker to the LoRaWAN gateway
-5. Dead-reckoning model with kalman filtering works and is able to narrow down location of a person
+5. Dead-reckoning model with kalman filtering is used and is able to narrow down location of a person to increase accuracy
 
 ### System Overview
 **Block Diagram**
