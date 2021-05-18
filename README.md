@@ -11,14 +11,14 @@
 
 ## Project Overview
 ### Project Description
-The purpose of this project is to build an outdoor GPS dead-reckoning with lorawan. It involves tracking a person using the Dragino Lorawan Module. A static beacon network will be created using the thing:52 for RSSI ranging and a dead-reckoning model with kalman filtering will be used. Lastly, a web dashboard viewer showing the current location will also be created. 
+The purpose of this project is to build an outdoor GPS dead-reckoning with lorawan. It involves tracking a person using the Dragino Lorawan Module. A static beacon network will be created using the thing:52 for RSSI ranging and a dead-reckoning model with kalman filtering will be used. Lastly, a web dashboard viewer showing the current location will also be created. Scenarios that this project will be useful in would be for things such as tracking animals and tracking movements of a person. 
 
 ### Key Performance Indicator
 The key performance indicators of the project would be:
-1. Able to send gps location data from the LoRaWAN gps tracker to the Dragino gateway without much packet loss, latency and jitter (QoS is used)
+1. Able to send gps location data, RSSI values and accelerometer data (longitude and latitude) from the mobile node to the LoRaWAN gps tracker
 2. Having a web dashboard viewer showing the general location of the person
 3. At least be able to track a person in a 10 x 10 m outdoor area
-4. Working static beacon network that is able to receive location data from the LoRaWAN gps tracker
+4. Able to send data from the LoRaWAN gps tracker to the LoRaWAN gateway
 5. Dead-reckoning model with kalman filtering works and is able to narrow down location of a person
 
 ### System Overview
