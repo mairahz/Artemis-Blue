@@ -23,7 +23,7 @@ The key performance indicators of the project would be:
 
 ### System Overview
 **Block Diagram**
-![alt text](image.jpg)
+![Block Diagram](systemdiagram.png)
 
 ### Sensor Integration
 
@@ -37,7 +37,7 @@ To facilitate RSSI ranging, the Thingy52 static nodes transmit bluetooth adverti
 | Value | 0b0011100 | e.g. 0x01 |
 
 The Particle Argon scans for these advertisements as per the following message protocol diagram:
-![alt text](image.jpg)
+![Bluetooth Diagram](btdiagram.png)
 
 **LoRaWAN network**
 
@@ -54,7 +54,7 @@ GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN a
 | Size (bytes) | 1 | 1 | 1 | 1 |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Description | RSSI of Static Node 1 | RSSI of Static Node 2 | RSSI of Static Node 3 | RSSI of Static Node 4 | 
-![alt text](image.jpg)
+![alt text](lwdigram.png)
 
 ### Algorithms
 Dead-reckoning model with kalman filtering will be used to estimate the location of the mobile node. This is done by first having a known location of the node and then calculating an estimated location of the node by using the previous known location and the two rssi values received from the static nodes. In order to increase the accuracy of the estimated location, Kalman filter is then used.
