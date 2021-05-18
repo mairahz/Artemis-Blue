@@ -26,7 +26,7 @@ The purpose of this project is to perform outdoor locating of a mobile node usin
 The L76-L GPS sensor will be used to get longitude and latitude data for the mobile node. It will be accessed through I2C using the firmware on the LTG92. 
 
 ### Wireless Network Communications
-**Bluetooth network**
+#### Bluetooth network 
 To facilitate RSSI ranging, the Thingy52 static nodes transmit bluetooth advertisements with the following payload format:
 
 | Byte | 0 | 1 |
@@ -38,7 +38,7 @@ The Particle Argon scans for these advertisements as per the following message p
 
 ![Bluetooth Diagram](btdiagram.png)
 
-**LoRaWAN network**
+#### LoRaWAN network 
 
 GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN as per the following payload formats and message protocol diagram:
 
@@ -68,20 +68,11 @@ The key performance indicators of the project would be:
 4. Having a web dashboard viewer that shows the determined location of the mobile node
 5. Be able to usefully track the mobile node in at least a 100 x 100 m outdoor area
 
-
-
-
-
-
-
-
-
-
 ### Equipment
 - 1 x LGT92 LoRaWAN GPS Tracker
 - 1 x Dragino Gateway
 - 4 x Thingy:52
-- 1 x Particle Argons
+- 1 x Particle Argon
 
 ### Progress
 - Received equipment
