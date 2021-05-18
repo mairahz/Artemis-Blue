@@ -7,7 +7,7 @@
 | Name | Role |
 | ----------- | ----------- |
 | Rhys Sneddon | I will be working on the static node network, mobile node and LoRaWAN gateway. This will involve: bluetooth advertising with the static nodes; bluetooth scanning with the particle argon in the mobile node; serial communication between the particle argon and LTG92 in the mobile node (to transfer RSSI data); and sending GPS and RSSI data over LoRaWAN to the LoRaWAN gateway.|
-| Mairah Zulkepli |  |
+| Mairah Zulkepli | I will be working on the dead reckoning model woth kalman filtering and pushing the data to the web dashboard. Once, the data from the LoRaWAN gateway is received, it will be passed through the dead reckoning model with kalman filter and then pushed to the web dashboard to display the current estimated location of the mobile node as well as the data received. |
 
 ## Project Overview/Scenario
 
