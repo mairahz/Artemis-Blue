@@ -15,11 +15,11 @@ The purpose of this project is to perform outdoor locating of a mobile node usin
 
 ### Key Performance Indicator
 The key performance indicators of the project would be:
-1. Able to send gps location data, RSSI values and accelerometer data (longitude and latitude) from the mobile node to the LoRaWAN gps tracker
-2. Having a web dashboard viewer showing the general location of the person
-3. At least be able to track a person in a 10 x 10 m outdoor area
-4. Able to send data from the LoRaWAN gps tracker to the LoRaWAN gateway
-5. Dead-reckoning model with kalman filtering is used and is able to narrow down location of a person to increase accuracy
+1. Particle argon able to determine RSSI values for the static nodes and send them to the LTG92
+2. Able to send data from the LTG92 LoRaWAN GPS tracker to the LoRaWAN gateway
+3. Data is processed using a dead-reckoning model with kalman filtering to determine the location of the mobile node with maximal accuracy
+4. Having a web dashboard viewer that shows the determined location of the mobile node
+5. Be able to usefully track the mobile node in at least a 100 x 100 m outdoor area
 
 ### System Overview
 **Block Diagram**
