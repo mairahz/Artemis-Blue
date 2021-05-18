@@ -32,7 +32,7 @@ The key performance indicators of the project would be:
 To facilitate RSSI ranging, the Thingy52 static nodes transmit bluetooth advertisements with the following payload format:
 
 | Byte | 0 | 1 |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 | Description | Preamble | Static Node ID |
 | Value | 0b0011100 | e.g. 0x01 |
 
@@ -46,13 +46,13 @@ GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN a
 **GPS and accelerometer data message payload (18 bytes)**
 
 | Size (bytes) | 4 | 4 | 2 | 1 | 2 | 2 | 1 | 2 | 
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Description | Latitude | Longitude | Alarm and battery | Flags | Roll | Pitch | HDOP | Altitude |
 
 **RSSI data message payload (4 bytes)**
 
 | Size (bytes) | 1 | 1 | 1 | 1 |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
 | Description | RSSI of Static Node 1 | RSSI of Static Node 2 | RSSI of Static Node 3 | RSSI of Static Node 4 | 
 ![alt text](image.jpg)
 
