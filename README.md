@@ -9,29 +9,20 @@
 | Rhys Sneddon |  |
 | Mairah Zulkepli |  |
 
-## Project Overview
-### Project Description and Application Scenarios
-The purpose of this project is to perform outdoor locating of a mobile node using GPS and RSSI data in a dead reckoning system with kalman filtering. A static beacon network will be created using four thing:52s. The mobile node (consisting of a particle argon and LTG92) will send RSSI data from the static beacon network, along with GPS data from the LTG92's GPS module, over LoRaWAN to a LoRaWAN gateway. An application server will process the data to determine the mobile node's location using a dead-reckoning model with kalman filtering. Lastly, a web dashboard viewer will be used to show the current location of the mobile node. Scenarios that this project would be useful in include tracking of animals, people or objects.
+## Project Overview/Scenario
 
-### Key Performance Indicator
-The key performance indicators of the project would be:
-1. Particle argon able to determine RSSI values for the static nodes and send them to the LTG92
-2. Able to send data from the LTG92 LoRaWAN GPS tracker to the LoRaWAN gateway
-3. Data is processed using a dead-reckoning model with kalman filtering to determine the location of the mobile node with maximal accuracy
-4. Having a web dashboard viewer that shows the determined location of the mobile node
-5. Be able to usefully track the mobile node in at least a 100 x 100 m outdoor area
+### Project and Scenario Description
+The purpose of this project is to perform outdoor locating of a mobile node using GPS and RSSI data in a dead reckoning system with kalman filtering. A static beacon network will be created using four thing:52s. The mobile node (consisting of a particle argon and LTG92) will send RSSI data from the static beacon network, along with GPS data from the LTG92's GPS module, over LoRaWAN to a LoRaWAN gateway. An application server will process the data to determine the mobile node's location using a dead-reckoning model with kalman filtering. Lastly, a web dashboard viewer will be used to show the current location of the mobile node. Scenarios that this project would be useful in include tracking of animals, people or objects.
 
 ### System Overview
 **Block Diagram**
-
 
 ![Block Diagram](systemdiagram.png)
 
 ### Sensor Integration
 The L76-L GPS sensor will be used to get longitude and latitude data for the mobile node. It will be accessed through I2C using the firmware on the LTG92. 
 
-
-### Wireless Network Integration
+### Wireless Network Communications
 **Bluetooth network**
 To facilitate RSSI ranging, the Thingy52 static nodes transmit bluetooth advertisements with the following payload format:
 
@@ -63,8 +54,25 @@ GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN a
 
 ![LWDiagram](lwdiagram.png)
 
-### Algorithms
+### Algorithm Schemes
 Dead-reckoning model with kalman filtering will be used to estimate the location of the mobile node. This is done by first having a known location of the node and then calculating an estimated location of the node by using the previous known location and the two rssi values received from the static nodes. In order to increase the accuracy of the estimated location, Kalman filter is then used.
+
+### Key Performance Indicators
+The key performance indicators of the project would be:
+1. Particle argon able to determine RSSI values for the static nodes and send them to the LTG92
+2. Able to send data GPS and RSSI data from the LTG92 LoRaWAN GPS tracker to the LoRaWAN gateway
+3. Data is processed using a dead-reckoning model with kalman filtering to determine the location of the mobile node with maximal accuracy
+4. Having a web dashboard viewer that shows the determined location of the mobile node
+5. Be able to usefully track the mobile node in at least a 100 x 100 m outdoor area
+
+
+
+
+
+
+
+
+
 
 ### Equipment
 - 1 x LGT92 LoRaWAN GPS Tracker
