@@ -22,13 +22,13 @@ The key performance indicators of the project would be:
 5. Dead-reckoning model with kalman filtering works and is able to narrow down location of a person
 
 ### System Overview
-** Block Diagram **
+**Block Diagram**
 ![alt text](image.jpg)
 
 ### Sensor Integration
 
 ### Wireless Network Integration
-** Bluetooth network **
+**Bluetooth network**
 To facilitate RSSI ranging, the Thingy52 static nodes transmit bluetooth advertisements with the following payload format:
 
 | Byte | 0 | 1 |
@@ -39,17 +39,17 @@ To facilitate RSSI ranging, the Thingy52 static nodes transmit bluetooth adverti
 The Particle Argon scans for these advertisements as per the following message protocol diagram:
 ![alt text](image.jpg)
 
-** LoRaWAN network **
+**LoRaWAN network**
 
 GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN as per the following payload formats and message protocol diagram:
 
-** GPS and accelerometer data message payload (18 bytes) **
+**GPS and accelerometer data message payload (18 bytes)**
 
 | Size (bytes) | 4 | 4 | 2 | 1 | 2 | 2 | 1 | 2 | 
 | ----------- | ----------- |
 | Description | Latitude | Longitude | Alarm and battery | Flags | Roll | Pitch | HDOP | Altitude |
 
-** RSSI data message payload (4 bytes) **
+**RSSI data message payload (4 bytes)**
 
 | Size (bytes) | 1 | 1 | 1 | 1 |
 | ----------- | ----------- |
