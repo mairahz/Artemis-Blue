@@ -57,7 +57,7 @@ GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN a
 ![alt text](image.jpg)
 
 ### Algorithms
-Dead-reckoning model with kalman filtering will be used to estimate the location of the mobile node. This is done by first having a known location of the node and then calculating an estimated location of the node by using the previous known location and the two rssi values received from the thingy:52. In order to increase the accuracy of the estimated location, Kalman filter is then used.
+Dead-reckoning model with kalman filtering will be used to estimate the location of the mobile node. This is done by first having a known location of the node and then calculating an estimated location of the node by using the previous known location and the two rssi values received from the static nodes. In order to increase the accuracy of the estimated location, Kalman filter is then used.
 
 ### Equipment
 - 1 x LGT92 LoRaWAN GPS Tracker
