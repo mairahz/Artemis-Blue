@@ -6,7 +6,7 @@
 
 | Name | Role |
 | ----------- | ----------- |
-| Rhys Sneddon | I will be working on the static node network, mobile node, LoRaWAN gateway and web dashboard. This will involve: bluetooth advertising with the static nodes; bluetooth scanning with the particle argon in the mobile node; serial communication between the particle argon and LTG92 in the mobile node (to transfer RSSI data); sending GPS and RSSI data over LoRaWAN to the LoRaWAN gateway and creating a web dashboard to display the determined mobile node position.|
+| Rhys Sneddon | I will be working on the static node network, mobile node and LoRaWAN gateway. This will involve: bluetooth advertising with the static nodes; bluetooth scanning with the particle argon in the mobile node; serial communication between the particle argon and LTG92 in the mobile node (to transfer RSSI data); and sending GPS and RSSI data over LoRaWAN to the LoRaWAN gateway.|
 | Mairah Zulkepli |  |
 
 ## Project Overview/Scenario
