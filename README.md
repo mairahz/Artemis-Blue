@@ -66,5 +66,6 @@ Dead-reckoning model with kalman filtering will be used to estimate the location
 - 1 x Particle Argons
 
 ### Progress
+- Connected and tested serial interface to LTG92 LoRaWAN GPS Tracker 
 - Researched more about dead-reckoning model
 - Found tutorials on using the LoRaWAN GPS Tracker
