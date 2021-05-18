@@ -28,7 +28,7 @@ The key performance indicators of the project would be:
 ![Block Diagram](systemdiagram.png)
 
 ### Sensor Integration
-
+The L76-L GPS sensor will be used to get longitude and latitude data for the mobile node. It will be accessed through I2C using the firmware on the LTG92. 
 
 
 ### Wireless Network Integration
