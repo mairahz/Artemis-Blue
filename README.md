@@ -21,6 +21,7 @@ The purpose of this project is to perform outdoor locating of a mobile node usin
 
 **Software Flow Chart**
 
+![Block Diagram](softwareflowcharts.png)
 
 ### Sensor Integration
 The L76-L GPS sensor will be used to get longitude and latitude data for the mobile node. It will be accessed through I2C using the firmware on the LTG92. 
