@@ -11,7 +11,7 @@
 
 ## Project Overview
 ### Project Description
-The purpose of this project is to build an outdoor locating system using GPS and RSSI data in a dead reckoning system with kalman filtering. A static beacon network will be created using four thing:52s. The mobile node (consisting of a particle argon and LTG92) will send RSSI data from the static beacon network, along with GPS data from the LTG92's GPS module, over LoRaWAN to a LoRaWAN gateway. An application server will process the data to determine the mobile node's location using a dead-reckoning model with kalman filtering. Lastly, a web dashboard viewer will be used to show the current location of the mobile node. Scenarios that this project would be useful in include tracking animals, people or objects.
+The purpose of this project is to perform outdoor locating of a mobile node using GPS and RSSI data in a dead reckoning system with kalman filtering. A static beacon network will be created using four thing:52s. The mobile node (consisting of a particle argon and LTG92) will send RSSI data from the static beacon network, along with GPS data from the LTG92's GPS module, over LoRaWAN to a LoRaWAN gateway. An application server will process the data to determine the mobile node's location using a dead-reckoning model with kalman filtering. Lastly, a web dashboard viewer will be used to show the current location of the mobile node. Scenarios that this project would be useful in include tracking of animals, people or objects.
 
 ### Key Performance Indicator
 The key performance indicators of the project would be:
@@ -28,6 +28,8 @@ The key performance indicators of the project would be:
 ![Block Diagram](systemdiagram.png)
 
 ### Sensor Integration
+
+
 
 ### Wireless Network Integration
 **Bluetooth network**
