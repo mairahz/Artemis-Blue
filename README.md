@@ -7,7 +7,7 @@
 | Name | Role |
 | ----------- | ----------- |
 | Rhys Sneddon | I will be working on the static node network, mobile node and LoRaWAN gateway. This will involve: bluetooth advertising with the static nodes; bluetooth scanning with the particle argon in the mobile node; serial communication between the particle argon and LTG92 in the mobile node (to transfer RSSI data); and sending GPS and RSSI data over LoRaWAN to the LoRaWAN gateway.|
-| Mairah Zulkepli | I will be working on the dead reckoning model woth kalman filtering and pushing the data to the web dashboard. Once, the data from the LoRaWAN gateway is received, it will be passed through the dead reckoning model with kalman filter and then pushed to the web dashboard to display the current estimated location of the mobile node as well as the data received. |
+| Mairah Zulkepli | I will be working on the dead reckoning model woth kalman filtering and pushing the data to the web dashboard. Once, the data from the LoRaWAN gateway is received, it will be passed through the dead reckoning model with kalman filter and then pushed to the web dashboard to display the current estimated location of the mobile node as well as the data received.|
 
 ## Project Overview/Scenario
 
@@ -21,12 +21,13 @@ The purpose of this project is to perform outdoor locating of a mobile node usin
 
 **Software Flow Chart**
 
+![Block Diagram](softwareflowcharts.png)
 
 ### Sensor Integration
 The L76-L GPS sensor will be used to get longitude and latitude data for the mobile node. It will be accessed through I2C using the firmware on the LTG92. 
 
 ### Wireless Network Communications
-**Bluetooth network**
+#### Bluetooth network 
 To facilitate RSSI ranging, the Thingy52 static nodes transmit bluetooth advertisements with the following payload format:
 
 | Byte | 0 | 1 |
@@ -38,7 +39,9 @@ The Particle Argon scans for these advertisements as per the following message p
 
 ![Bluetooth Diagram](btdiagram.png)
 
-**LoRaWAN network**
+The bluetooth network is arranged in a star topology with all of the static nodes communicating with the one mobile node. An extremely low data rate is required.
+
+#### LoRaWAN network 
 
 GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN as per the following payload formats and message protocol diagram:
 
@@ -57,6 +60,8 @@ GPS and RSSI and accelerometer data is sent to the LoRaWAN gateway via LoRaWAN a
 
 ![LWDiagram](lwdiagram.png)
 
+The LoRaWAN network is arranged in point-to-point topology (LGT92 to Dragino LoRaWAN gateway). An extremely low data rate is required.
+
 ### Algorithm Schemes
 Dead-reckoning model with kalman filtering will be used to estimate the location of the mobile node. This is done by first having a known location of the node and then calculating an estimated location of the node by using the previous known location and the two rssi values received from the static nodes. In order to increase the accuracy of the estimated location, Kalman filter is then used.
 
@@ -68,20 +73,11 @@ The key performance indicators of the project would be:
 4. Having a web dashboard viewer that shows the determined location of the mobile node
 5. Be able to usefully track the mobile node in at least a 100 x 100 m outdoor area
 
-
-
-
-
-
-
-
-
-
 ### Equipment
 - 1 x LGT92 LoRaWAN GPS Tracker
 - 1 x Dragino Gateway
 - 4 x Thingy:52
-- 1 x Particle Argons
+- 1 x Particle Argon
 
 ### Progress
 - Received equipment
